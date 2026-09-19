@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1",
+  "resources": [
+    {
+      "id": "aikm-resource:01M2XABPN2ZGYSF7N2YJGFH1MH",
+      "name": "OPINIONS.md",
+      "kind": "standard",
+      "role": "instruction",
+      "digest": "9d33f25ee0331e884228b7ec40db92f37ab5b60ec0017f6ec1aba61589cf447d"
+    }
+  ]
+}

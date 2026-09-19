@@ -48,7 +48,7 @@ comentários explicam o modelo e os limites do estudo, sem repetir cada linha.
 
 - `src/sketch/signal.ts`: sinais e movimento independente.
 - `src/sketch/rules.ts`: regras de relação e influência local do campo.
-- `src/sketch/system.ts`: renderização p5 e ciclo de vida.
+- `src/sketch/system.ts`: renderização em Canvas 2D e ciclo de vida.
 - `src/main.ts`: controles da página e API de integração.
 - `docs/study.md`: hipótese, observações e próximos experimentos.
 
@@ -57,7 +57,8 @@ comentários explicam o modelo e os limites do estudo, sem repetir cada linha.
 - `docs/study.md`: guia do fenômeno, do ciclo de execução e da observação.
 - `docs/decisions/001-foundation.md`: escolhas técnicas e visuais da fundação.
 - `docs/decisions/002-didactic-structure.md`: decisão de tornar código e documentação legíveis pelo mesmo percurso.
+- `docs/decisions/003-native-canvas.md`: substituição de p5 pela plataforma nativa.
 
 ## Integração
 
-O estudo usa p5 em modo de instância dentro de `#sketch`, sem alterar conteúdo externo. O objeto `window.signalStructure` expõe `setField({ reach, affinity })`, `setMotion(boolean)` e `destroy()`. Os valores de `reach` e `affinity` variam de 0 a 1. A página mantém texto e um campo visual estático em CSS sem JavaScript. Com `prefers-reduced-motion`, o estudo inicia parado e pode ser retomado pelo controle.
+O estudo usa Canvas 2D nativo dentro de `#sketch`, sem alterar conteúdo externo. O objeto `window.signalStructure` expõe `setField({ reach, affinity })`, `setMotion(boolean)` e `destroy()`. Os valores de `reach` e `affinity` variam de 0 a 1. A página mantém texto e um campo visual estático em CSS sem JavaScript. Com `prefers-reduced-motion`, o estudo inicia parado e pode ser retomado pelo controle. O ciclo de desenho usa `requestAnimationFrame` com atualização limitada a aproximadamente 30 fps e respeita a densidade de pixels do dispositivo até 2x.

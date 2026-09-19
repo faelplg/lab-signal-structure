@@ -8,12 +8,17 @@
     <title>Study 001 - Signal Structure | fael.tech Lab</title>
   </head>
   <body>
+    <!-- A página permanece uma narrativa HTML completa. O canvas amplia a
+         experiência, mas título, hipótese, controles e estado continuam
+         disponíveis como conteúdo semântico independente da renderização. -->
     <div class="site-shell">
       <header class="topbar" aria-label="Identidade do laboratório">
         <a class="wordmark" href="/" aria-label="fael.tech Lab, início">fael<span class="wordmark-dot">.</span>tech <span class="wordmark-lab">/ lab</span></a>
         <span class="topbar-index">ESTUDO 001 <span aria-hidden="true">/</span> 2026</span>
       </header>
 
+      <!-- O layout coloca argumento e evidência lado a lado em desktop. No
+           mobile, a mesma ordem do documento mantém a leitura antes do uso. -->
       <main class="study-layout">
         <section class="intro" aria-labelledby="study-title">
           <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> CREATIVE CODING <span class="eyebrow-rule" aria-hidden="true"></span> 001</div>
@@ -26,6 +31,8 @@
 
         <section class="experiment" aria-label="Experimento Signal Structure">
           <div class="experiment-header"><span>CAMPO / 001</span><span class="live-indicator"><span aria-hidden="true"></span> <span id="state-label">EM MOVIMENTO</span></span></div>
+          <!-- A moldura tem três camadas deliberadas: canvas dinâmico, fallback
+               CSS sem JavaScript e anotações editoriais que não capturam input. -->
           <div class="canvas-frame" id="canvas-frame">
             <div id="sketch" role="img" aria-label="Sinais em movimento formam conexões temporárias de acordo com distância e direção"></div>
             <div class="canvas-fallback" aria-hidden="true"></div>
@@ -36,6 +43,8 @@
         </section>
       </main>
 
+      <!-- Controles HTML nativos preservam teclado, foco e valores acessíveis.
+           main.ts apenas normaliza esses valores para o domínio do estudo. -->
       <section class="controls" aria-label="Controles do experimento">
         <div class="controls-title"><span class="small-index">AJUSTE O CAMPO</span><p>Altere as relações,<br />observe a estrutura.</p></div>
         <div class="control-group"><label for="reach">01 <span>ALCANCE</span> <output id="reach-value" for="reach">52%</output></label><input id="reach" type="range" min="0" max="100" value="52" /><p>Distância em que sinais podem se reconhecer.</p></div>
@@ -45,6 +54,8 @@
 
       <footer class="footer"><span>FAEL.TECH / LAB</span><span>I BUILD TO UNDERSTAND.</span><span>STUDY 001 © 2026</span></footer>
     </div>
+    <!-- O módulo entra por último para que sua inicialização encontre toda a
+         superfície editorial e possa falhar sem ocultar o conteúdo estático. -->
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
