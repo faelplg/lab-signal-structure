@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111210" />
+    <meta name="description" content="Signal Structure: um estudo interativo sobre como relações entre sinais revelam estruturas." />
+    <title>Study 001 - Signal Structure | fael.tech Lab</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar" aria-label="Identidade do laboratório">
+        <a class="wordmark" href="/" aria-label="fael.tech Lab, início">fael<span class="wordmark-dot">.</span>tech <span class="wordmark-lab">/ lab</span></a>
+        <span class="topbar-index">ESTUDO 001 <span aria-hidden="true">/</span> 2026</span>
+      </header>
+
+      <main class="study-layout">
+        <section class="intro" aria-labelledby="study-title">
+          <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> CREATIVE CODING <span class="eyebrow-rule" aria-hidden="true"></span> 001</div>
+          <h1 id="study-title">Signal<br /><em>Structure.</em></h1>
+          <p class="lede">Como sinais simples podem revelar estruturas quando suas relações mudam?</p>
+          <p class="intro-note">Pontos seguem seu próprio ritmo. Linhas aparecem quando proximidade e direção encontram um acordo temporário.</p>
+          <div class="principle"><span class="principle-number">01 / HIPÓTESE</span><p>A estrutura não é desenhada. Ela emerge das relações.</p></div>
+          <div class="intro-bottom"><span>FROM SIGNAL<br />TO STRUCTURE</span><span class="down-arrow" aria-hidden="true">↘</span></div>
+        </section>
+
+        <section class="experiment" aria-label="Experimento Signal Structure">
+          <div class="experiment-header"><span>CAMPO / 001</span><span class="live-indicator"><span aria-hidden="true"></span> <span id="state-label">EM MOVIMENTO</span></span></div>
+          <div class="canvas-frame" id="canvas-frame">
+            <div id="sketch" role="img" aria-label="Sinais em movimento formam conexões temporárias de acordo com distância e direção"></div>
+            <div class="canvas-fallback" aria-hidden="true"></div>
+            <span class="canvas-corner corner-tl" aria-hidden="true">+</span><span class="canvas-corner corner-tr" aria-hidden="true">+</span><span class="canvas-corner corner-bl" aria-hidden="true">+</span><span class="canvas-corner corner-br" aria-hidden="true">+</span>
+            <div class="canvas-overlay"><span>RELATIONAL FIELD</span><span id="connection-count">00 CONEXÕES</span></div>
+          </div>
+          <div class="field-caption"><span>MOVA O PONTEIRO PARA ALTERAR O CAMPO</span><span>ESTRUTURAS TEMPORÁRIAS / SEM ESTADO FINAL</span></div>
+        </section>
+      </main>
+
+      <section class="controls" aria-label="Controles do experimento">
+        <div class="controls-title"><span class="small-index">AJUSTE O CAMPO</span><p>Altere as relações,<br />observe a estrutura.</p></div>
+        <div class="control-group"><label for="reach">01 <span>ALCANCE</span> <output id="reach-value" for="reach">52%</output></label><input id="reach" type="range" min="0" max="100" value="52" /><p>Distância em que sinais podem se reconhecer.</p></div>
+        <div class="control-group"><label for="affinity">02 <span>AFINIDADE</span> <output id="affinity-value" for="affinity">58%</output></label><input id="affinity" type="range" min="0" max="100" value="58" /><p>Valores maiores favorecem conexões entre direções.</p></div>
+        <button class="motion-button" id="motion-toggle" type="button" aria-pressed="false"><span class="button-symbol" aria-hidden="true">Ⅱ</span><span>PAUSAR<br />MOVIMENTO</span></button>
+      </section>
+
+      <footer class="footer"><span>FAEL.TECH / LAB</span><span>I BUILD TO UNDERSTAND.</span><span>STUDY 001 © 2026</span></footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
